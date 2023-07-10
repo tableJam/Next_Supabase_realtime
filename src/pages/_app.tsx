@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { QueryClientProvider,QueryClient } from 'react-query'
 import { QueryClientConfig } from 'react-query'
 import { ContextProvider } from '@/context/ContextProvider'
+import { UseQueryResult } from 'react-query'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

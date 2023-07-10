@@ -11,3 +11,14 @@ export interface IProfile {
   id: string,
   created_at: string
 }
+
+export interface INotice {
+  id: string,
+  created_at: string,
+  user_id: string,
+  content: string,
+}
+
+export interface IEditedNotice {
+  content: string,
+}

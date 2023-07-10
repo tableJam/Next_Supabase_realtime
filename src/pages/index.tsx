@@ -18,18 +18,21 @@ export default function Home() {
       }
     });
   },[]);
+
   useEffect(()=>{
     const validAuth = async() => {
       const user = await supabase.auth.getUser();
-      if(!user.error)setLogin(false);
-      console.log(user);
+      setLogin(user?true:false)
+      
     }
     validAuth();
   },[])
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className} text-mono`}
     >
+
       {
         isLogin ?   <Dashbord/>:<Auth/>
       }
